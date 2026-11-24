@@ -12,7 +12,7 @@ Planned MQTT topics:
 
 | Topic | Payload | From |
 | --- | --- | --- |
-| `rover/status` | position, battery, mode | ESP32 |
-| `rover/racks/<id>/temp` | temperature °C | ESP32 |
+| `rover/status` | position, battery, mode | Arduino |
+| `rover/racks/<id>/temp` | temperature °C | Arduino |
 | `rover/racks/<id>/fault` | `red` / `blinking` / `ok` | Pi |
 | `rover/cmd` | `start`, `stop`, `home` | dashboard |

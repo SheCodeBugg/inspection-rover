@@ -1,4 +1,4 @@
-// Secure Autonomous Inspection Rover — ESP32 firmware
+// Secure Autonomous Inspection Rover — main firmware (Arduino UNO R4 WiFi)
 // Stage 0: "blink" + serial heartbeat to confirm the toolchain works.
 
 #include <Arduino.h>
@@ -23,6 +23,11 @@ void loop() {
     lastBeat = now;
     ledOn = !ledOn;
     digitalWrite(PIN_STATUS_LED, ledOn ? HIGH : LOW);
-    Serial.printf("heartbeat %lu  uptime %lus\n", ++beatCount, now / 1000);
+    beatCount++;
+    Serial.print("heartbeat ");
+    Serial.print(beatCount);
+    Serial.print("  uptime ");
+    Serial.print(now / 1000);
+    Serial.println("s");
   }
 }

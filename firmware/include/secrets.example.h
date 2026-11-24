@@ -4,7 +4,7 @@
 // secrets.h is listed in .gitignore so it never reaches GitHub.
 //
 // Stage 4 note: hard-coded secrets in firmware are a real weakness.
-// In v2, keys move to the ESP32's encrypted NVS storage instead.
+// In v2, keys move out of the source code and into protected storage.
 
 constexpr char WIFI_SSID[] = "your-hotspot-name";
 constexpr char WIFI_PASSWORD[] = "your-hotspot-password";
